@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neeraj Gurunathan</title>
+<meta name="description" content="Mathematics and Computing student at BITS Pilani Dubai working on quant strategies, stochastic processes, machine learning and AI.">
+<style>
+:root{
+  --bg:#f6f7f9; --ink:#14171c; --mute:#5a6370; --line:#d9dde3; --accent:#2f4bd8;
+  --serif:"Latin Modern Roman","Computer Modern",Georgia,"Times New Roman",serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0f1217;--ink:#e7eaf0;--mute:#98a1af;--line:#272d37;--accent:#93a6ff;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0f1217;--ink:#e7eaf0;--mute:#98a1af;--line:#272d37;--accent:#93a6ff;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:1.125rem;line-height:1.65}
+canvas#paths{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+main{position:relative;z-index:1;max-width:42rem;margin:0 auto;padding:4rem 1.5rem 5rem}
+a{color:var(--accent);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+header{display:flex;gap:1.75rem;align-items:center;margin-bottom:2.5rem}
+header img{width:7.5rem;height:9rem;object-fit:cover;object-position:50% 20%;border-radius:.4rem;flex:none}
+h1{font-size:2.4rem;line-height:1.1;margin:0 0 .4rem;font-weight:600;letter-spacing:-.01em}
+.tag{margin:0;color:var(--mute)}
+h2{font-size:1.35rem;margin:3rem 0 1rem;font-weight:600}
+.item{margin:0 0 1.5rem}
+.item h3{font-size:1.1rem;margin:0;font-weight:600}
+.item .when{color:var(--mute);font-size:.95rem;margin:0 0 .3rem}
+.item p{margin:.2rem 0 0}
+ul{margin:.3rem 0 0;padding-left:1.1rem}
+li{margin:.25rem 0}
+.links{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:1.25rem 0 0;padding:0;list-style:none}
+.links li{margin:0}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.25rem}
+dt{color:var(--mute)}dd{margin:0}
+footer{margin-top:4rem;padding-top:1.25rem;border-top:1px solid var(--line);color:var(--mute);font-size:.95rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+button{font:inherit;color:var(--mute);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:.2em}
+@media (max-width:30rem){
+  header{flex-direction:column;align-items:flex-start}
+  h1{font-size:2rem} dl{grid-template-columns:1fr;gap:0} dd{margin-bottom:.6rem}
+}
+</style>
+</head>
+<body>
+<canvas id="paths" aria-hidden="true"></canvas>
+<main>
+  <header>
+    <img src="photo.jpg" alt="Portrait of Neeraj Gurunathan" width="120" height="144">
+    <div>
+      <h1>Neeraj Gurunathan</h1>
+      <p class="tag">Mathematics and Computing at BITS Pilani, Dubai.<br>Machine learning, AI, stochastic processes and quant strategies.</p>
+      <ul class="links">
+        <li><a href="mailto:neeraj.math06@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Neeraj-31">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/neeraj-gurunathan">LinkedIn</a></li>
+        <li><a href="NEERAJ_G_0926.pdf">Résumé</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <p>I’m a second-year student who likes problems where randomness has structure. Right now that means JEPA and self-supervised learning, rough volatility in crypto options, coagulation–fragmentation equations, and using machine learning to put honest error bars on predictions.</p>
+
+  <h2>Currently</h2>
+  <div class="item">
+    <h3>Learning and building with JEPA</h3>
+    <p class="when">Joint-Embedding Predictive Architectures</p>
+    <p>Studying self-supervised models that predict in representation space instead of reconstructing raw inputs, and working through implementations of them.</p>
+  </div>
+  <div class="item">
+    <h3>Stochastic particle dynamics, with a professor</h3>
+    <p class="when">Feb. 2026 to present</p>
+    <p>Building Monte Carlo solvers in Python for coagulation–fragmentation and Becker–Döring equations, to model steady-state cluster distributions and their uses in financial markets.</p>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="item">
+    <h3>Crypto options volatility modelling</h3>
+    <p class="when">Python, Deribit API, NumPy, SciPy · 2026</p>
+    <ul>
+      <li>Wrote rough Bergomi and rough Heston option pricers from scratch to test for rough volatility in BTC and ETH.</li>
+      <li>Simulated fractional Brownian motion with the BLP hybrid scheme and solved fractional Riccati equations.</li>
+      <li>Estimated the Hurst parameter with the Gatheral–Jaisson–Rosenbaum method and checked it using Fukasawa’s approach.</li>
+      <li>Calibrated SSVI, SABR, Heston and rough Bergomi to live Deribit order book data.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <h3><a href="https://github.com/Neeraj-31/HEP_ML_COSTPREDICTION">Cost overrun prediction for hydroelectric projects</a></h3>
+    <p class="when">Python · machine learning and Monte Carlo</p>
+    <p>An integrated framework that predicts cost overruns and supports decisions for hydroelectric projects in Uttarakhand and Himachal Pradesh. It includes data analysis, per-model feature importances, and Monte Carlo cost overrun distributions for existing dams.</p>
+  </div>
+  <div class="item">
+    <h3><a href="https://github.com/Neeraj-31/bsm_bgm_montecarlo">Black–Scholes and Monte Carlo</a></h3>
+    <p class="when">Python · stochastic calculus</p>
+    <p>Applies and compares Monte Carlo simulation against the Black–Scholes model.</p>
+  </div>
+  <div class="item">
+    <h3><a href="https://github.com/Neeraj-31/spy-analysis">SPY analysis</a></h3>
+    <p class="when">Jupyter Notebook · algorithmic trading</p>
+    <p>A folder of notebooks for algorithmic trading experiments on SPY.</p>
+  </div>
+
+  <h2>Experience</h2>
+  <div class="item">
+    <h3>AI Research Publication Coordinator, AGCOE</h3>
+    <p class="when">BITS Pilani, Dubai Campus · 2026 to present</p>
+    <p>Coordinating AI research publications: literature reviews, manuscript preparation and peer-review workflows with researchers.</p>
+  </div>
+  <div class="item">
+    <h3>ML Research Intern, IIT Roorkee</h3>
+    <p class="when">ML-based cost overrun prediction · June to July 2026</p>
+    <ul>
+      <li>Built geospatial and climate feature pipelines (GIS, IMD, CHIRPS, CHIRTS) over about 10,000 data points.</li>
+      <li>Benchmarked supervised models for infrastructure cost overruns and found the best performer.</li>
+      <li>Added Monte Carlo simulation on top to quantify prediction uncertainty and classify project-level financial risk.</li>
+    </ul>
+  </div>
+
+  <h2>Competitions</h2>
+  <div class="item">
+    <p><strong>IMC Prosperity 2026, finalist.</strong> Ranked first nationally in manual trading; 3275th of 18,803 teams globally.</p>
+    <p><strong>QRT Asset Allocation Challenge 2026</strong> (M2PF Data Challenge, École Polytechnique). Scored 0.5158 against a 0.50 benchmark, top 10 on the private academic leaderboard.</p>
+  </div>
+
+  <h2>Education</h2>
+  <div class="item">
+    <h3>BE Mathematics and Computing, BITS Pilani, Dubai</h3>
+    <p class="when">Sept. 2024 to June 2028 · Current CGPA 8.98 / 10</p>
+    <p>Deep Learning, Stochastic Calculus and Applications to Finance, Probability and Statistics, Linear Algebra, Numerical Analysis, Numerical Optimization, DSA.</p>
+  </div>
+
+  <h2>Tools</h2>
+  <dl>
+    <dt>Languages</dt><dd>Python (NumPy, SciPy, Pandas, scikit-learn, PyTorch, Matplotlib), R, C++, C</dd>
+    <dt>Work</dt><dd>Git, Jupyter, VS Code, LaTeX</dd>
+    <dt>Interests</dt><dd>Stochastic processes, time series, quant strategies, AI research</dd>
+  </dl>
+
+  <footer>
+    <span>© <span id="yr">2026</span> Neeraj Gurunathan</span>
+    <button id="theme" type="button">Switch theme</button>
+  </footer>
+</main>
+
+<script>
+// Faint Brownian paths in the background: drawn once, static if motion is reduced.
+(function(){
+  var c=document.getElementById('paths'),x=c.getContext('2d');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var W,H,paths,t=0;
+  function gauss(){var u=1-Math.random(),v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+  function setup(){
+    var d=Math.min(devicePixelRatio||1,2);
+    W=innerWidth;H=innerHeight;c.width=W*d;c.height=H*d;x.setTransform(d,0,0,d,0,0);
+    paths=[];var n=7,steps=Math.ceil(W/3);
+    for(var i=0;i<n;i++){var y=H*(.2+.6*i/(n-1)),p=[y];
+      for(var k=1;k<=steps;k++)p.push(p[k-1]+gauss()*3.2);
+      paths.push(p)}
+  }
+  function color(){return getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()}
+  function draw(upTo){
+    x.clearRect(0,0,W,H);x.strokeStyle=color();x.globalAlpha=.13;x.lineWidth=1;
+    paths.forEach(function(p){x.beginPath();
+      for(var k=0;k<=upTo&&k<p.length;k++){k?x.lineTo(k*3,p[k]):x.moveTo(0,p[0])}
+      x.stroke()});
+  }
+  function run(){
+    if(reduce){draw(1e9);return}
+    var total=paths[0].length;
+    (function f(){t+=6;draw(t);if(t<total)requestAnimationFrame(f)})();
+  }
+  setup();run();
+  var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){t=0;setup();draw(1e9)},200)});
+  window.redrawPaths=function(){draw(1e9)};
+})();
+
+// Theme toggle: remembers the choice when storage is available.
+(function(){
+  var root=document.documentElement,b=document.getElementById('theme');
+  try{var s=localStorage.getItem('theme');if(s)root.setAttribute('data-theme',s)}catch(e){}
+  b.addEventListener('click',function(){
+    var dark=getComputedStyle(root).colorScheme==='dark';
+    var next=dark?'light':'dark';root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+    window.redrawPaths&&window.redrawPaths();
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
